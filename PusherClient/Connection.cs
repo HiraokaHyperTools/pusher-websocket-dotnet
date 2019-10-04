@@ -116,11 +116,11 @@ namespace PusherClient
 
         private void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
-            try
+            //try
             {
                 websocket_MessageReceivedImpl(sender, e);
             }
-            catch (Exception)
+            //catch (Exception)
             {
                 // なにもしない
             }
@@ -195,11 +195,11 @@ namespace PusherClient
 
         private void websocket_Opened(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 websocket_OpenedImpl(sender, e);
             }
-            catch (Exception)
+            //catch (Exception)
             {
                 // なにもしない
             }
@@ -214,11 +214,11 @@ namespace PusherClient
 
         private void websocket_Closed(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 websocket_ClosedImpl(sender, e);
             }
-            catch (Exception)
+            //catch (Exception)
             {
                 // なにもしない
             }
@@ -259,11 +259,11 @@ namespace PusherClient
 
         private void websocket_Error(object sender, SuperSocket.ClientEngine.ErrorEventArgs e)
         {
-            try
+            //try
             {
                 websocket_ErrorImpl(sender, e);
             }
-            catch (Exception)
+            //catch (Exception)
             {
                 // なにもしない
             }

@@ -1,42 +1,36 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0"?>
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net45;net46;netstandard1.6</TargetFrameworks>
   </PropertyGroup>
-
   <PropertyGroup>
-      <PackageId>PusherClient</PackageId>
-      <PackageTitle>Pusher .NET Client Library</PackageTitle>
-      <PackageVersion>0.6</PackageVersion>
-      <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-      <PackageTags>pusher realtime websocket</PackageTags>
-      <License>https://github.com/pusher/pusher-websocket-dotnet/blob/master/LICENSE.txt</License>
-      <PackageProjectUrl>https://github.com/pusher/pusher-websocket-dotnet</PackageProjectUrl>
-      <PackageCopyright>Copyright © Pusher 2019</PackageCopyright>
-      <PackageDescription>$description$</PackageDescription>
-      <PackageIconUrl>https://pusher.com/static_logos/64x64.png</PackageIconUrl>
+    <PackageId>HiraokaHyperTools.PusherClient</PackageId>
+    <PackageTitle>Pusher .NET Client Library</PackageTitle>
+    <PackageVersion>0.6.3</PackageVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>pusher realtime websocket</PackageTags>
+    <License>https://github.com/HiraokaHyperTools/pusher-websocket-dotnet/blob/master/LICENSE.txt</License>
+    <PackageProjectUrl>https://github.com/HiraokaHyperTools/pusher-websocket-dotnet</PackageProjectUrl>
+    <PackageCopyright>Copyright &#xA9; Pusher 2019</PackageCopyright>
+    <PackageDescription>$description$</PackageDescription>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
-    <PackageReference Include="WebSocket4Net" Version="0.15.2" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0"/>
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2"/>
+    <PackageReference Include="HiraokaHyperTools.WebSocket4Net" Version="0.15.4"/>
+    <PackageReference Include="HiraokaHyperTools.SuperSocket.ClientEngine" Version="0.10.2"/>
   </ItemGroup>
-
   <ItemGroup>
-    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http"/>
   </ItemGroup>
-
   <ItemGroup Condition="'$(TargetFramework)' == 'net46'">
     <PackageReference Include="System.Diagnostics.TraceSource">
       <Version>4.3.0</Version>
     </PackageReference>
   </ItemGroup>
-
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard1.6'">
     <PackageReference Include="System.Diagnostics.TraceSource">
       <Version>4.3.0</Version>
     </PackageReference>
   </ItemGroup>
-
 </Project>
