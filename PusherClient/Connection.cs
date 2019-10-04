@@ -112,6 +112,18 @@ namespace PusherClient
 
         private void websocket_MessageReceived(object sender, MessageReceivedEventArgs e)
         {
+            try
+            {
+                websocket_MessageReceivedImpl(sender, e);
+            }
+            catch (Exception)
+            {
+                // なにもしない
+            }
+        }
+
+        private void websocket_MessageReceivedImpl(object sender, MessageReceivedEventArgs e)
+        {
             Pusher.Trace.TraceEvent(TraceEventType.Information, 0, "Websocket message received: " + e.Message);
 
             Debug.WriteLine(e.Message);
@@ -179,12 +191,36 @@ namespace PusherClient
 
         private void websocket_Opened(object sender, EventArgs e)
         {
+            try
+            {
+                websocket_OpenedImpl(sender, e);
+            }
+            catch (Exception)
+            {
+                // なにもしない
+            }
+        }
+
+        private void websocket_OpenedImpl(object sender, EventArgs e)
+        {
             Pusher.Trace.TraceEvent(TraceEventType.Information, 0, "Websocket opened OK.");
             _connectionTaskComplete.SetResult(ConnectionState.Connected);
             _connectionTaskComplete = null;
         }
 
         private void websocket_Closed(object sender, EventArgs e)
+        {
+            try
+            {
+                websocket_ClosedImpl(sender, e);
+            }
+            catch (Exception)
+            {
+                // なにもしない
+            }
+        }
+
+        private void websocket_ClosedImpl(object sender, EventArgs e)
         {
             Pusher.Trace.TraceEvent(TraceEventType.Warning, 0, "Websocket connection has been closed");
 
@@ -218,6 +254,18 @@ namespace PusherClient
         }
 
         private void websocket_Error(object sender, SuperSocket.ClientEngine.ErrorEventArgs e)
+        {
+            try
+            {
+                websocket_ErrorImpl(sender, e);
+            }
+            catch (Exception)
+            {
+                // なにもしない
+            }
+        }
+
+        private void websocket_ErrorImpl(object sender, SuperSocket.ClientEngine.ErrorEventArgs e)
         {
             Pusher.Trace.TraceEvent(TraceEventType.Error, 0, "Error: " + e.Exception);
 
