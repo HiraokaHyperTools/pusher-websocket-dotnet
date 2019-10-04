@@ -6,7 +6,7 @@
   <PropertyGroup>
     <PackageId>HiraokaHyperTools.PusherClient</PackageId>
     <PackageTitle>Pusher .NET Client Library</PackageTitle>
-    <PackageVersion>0.6.3</PackageVersion>
+    <PackageVersion>0.8.0</PackageVersion>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageTags>pusher realtime websocket</PackageTags>
     <License>https://github.com/HiraokaHyperTools/pusher-websocket-dotnet/blob/master/LICENSE.txt</License>
