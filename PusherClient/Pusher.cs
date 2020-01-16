@@ -417,7 +417,14 @@ namespace PusherClient
         {
             foreach (var channel in Channels)
             {
-                var result = SubscribeToChannel(channel.Key).Result;
+                try
+                {
+                    var result = SubscribeToChannel(channel.Key).Result;
+                }
+                catch
+                {
+                    // simply ignore it, for now...
+                }
             }
         }
     }
