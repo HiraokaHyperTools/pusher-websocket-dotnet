@@ -4,14 +4,14 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- master
+- dev-ng
 
 schedules:
-  - cron: "0 12 * * 0"
-    displayName: Weekly Sunday build
+  - cron: "0 9 1 * *"
+    displayName: Monthly build
     branches:
       include:
-        - master
+        - dev-ng
     always: true
 
 pool:
